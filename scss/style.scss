@@ -1,5 +1,357 @@
+*,
+*::after,
+*::before,
 body {
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    font-family: "Motiva Sans", Sans-serif;
 }
+.nav_wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 14px;
+}
+.global_header {
+    background: #171a21;
+    width: 100%;
+    height: 104px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.steam_logo {
+    display: flex;
+    width: 176px;
+    height: 44px;
+    aspect-ratio: auto 174/44;
+    align-self: center;
+}
+.navigation_menu {
+    align-self: center;
+}
+.nav_list {
+    text-decoration: none;
+    list-style: none;
+    text-transform: uppercase;
+    color: #b8b6b4;
+    display: flex;
+
+}
+.nav_list li {
+    margin: 0 5px;
+}
+// drop down menu at navigation
+
+.nav_list ul {
+    font-size: 11px;
+    color: #b8b6b4;
+    text-transform: uppercase;
+    padding-right: 10px;
+    position: absolute;
+    min-width: 100px;
+    display: none;
+    background: #171a21;
+    z-index: 1;
+    box-shadow: 3px 3px 5px -3px #000;
+}
+.nav_list ul li {
+    display: block;
+    background: #171a21;
+    padding: 5px 15px 10px 15px;;
+}
+.nav_list li:hover ul {
+    display: block;
+}
+
+.navigation_menu a:hover {
+    color: #ffffff;
+}
+.navigation_menu a {
+    text-decoration: none;
+    color:#b8b6b4;
+}
+// drop down menu at navigation - end
+.sign_in_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0px auto;
+    width: 60%;
+}
+.sign_in_section a {
+    text-decoration: none;
+    color: #b8b6b4;
+    padding: 0px 10px;
+    font-size: 11px;
+    align-self: center;
+}
+.instal_btn {
+    background-color: #5c7e10;
+    color: #e5e4dc !important;
+    background-image: url(https://store.cloudflare.steamstatic.com/public/shared/images/header/btn_header_installsteam_download.png?v=1);
+    background-repeat: no-repeat;
+    padding-left: 35px !important;
+    background-position: 10px 3.5px;
+    height: 21px;
+    line-height: 220%;
+}
+.instal_btn:hover{
+    color: #ffffff !important;
+}
+.page_template {
+    height: 100vh;
+    min-height: 100%;
+    width: 100%;
+    background-color: #212429;
+    position: relative;
+}
+.background_image_cover {
+    background:url(/images/acct_creation_bg.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    left: -15%;
+}
+.join_form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+    margin: auto;
+    padding-top: 60px;
+}
+.section_title h1 {
+    color: #ffffff;
+    font-size: 34px;
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 0px 4px 4px rgb(0, 0, 0 / 25%);
+}
+
+.form_area {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding-bottom: 35px;
+    font-size: 14px;
+}
+.form_area label {
+    color: #b8b6b4;
+}
+.form_area input, select {
+    background-color: #32353C;
+    border-radius: 3px;
+    box-shadow: none;
+    border: none;
+    height: 100%;
+    color: #e9e9e9;
+    padding: 8px 6px;
+}
+
+
+//  Pudełko z postanowieniami licencji
+
+.steam_subscriber_ag{
+    width: 668px;
+    height: 379px;
+    overflow: auto;
+    border: 1px solid #364c59;
+    line-height: 15px;
+    color: #7d7d7d;
+    padding: 35px;
+    font-size: 12px;
+}
+.btn_blue_steamui {
+  background:linear-gradient( to right, #47bfff 5%, #1a44c2 60%);
+  border-radius: 2px;
+  display: block;
+  border: none;
+  padding: 5px 55px;
+}
+.btn_span {
+    font-size: 15px;
+    line-height: 30px;
+    color: white;
+    text-shadow: 1px 1px 0px rgb(0, 0, 0) / (30%);
+    font-weight: lighter;
+}
+
+.steam_subscriber_ag li {
+    color: #ffffff;
+    margin:0.5px 0;
+}
+
+.steam_subscriber_ag h3{
+    color: #ffffff;
+    margin-bottom: 1em;
+    font-weight: 400;
+    font-size: 25px;
+}
+.steam_subscriber_ag a {
+    text-decoration: none;
+    color: #ffffff;
+}
+//check box
+.check_box_agree {
+    color: #7d7d7d;
+    font-size: 14px;
+    margin: 20px 0;
+}
+.check_box_agree a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+//scroll bar
+
+::-webkit-scrollbar {
+width: 15px;
+}
+::-webkit-scrollbar-thumb {
+background-color: #7d7d7d !important;
+}
+::-webkit-scrollbar-thumb {
+background-color: #1d1d1d;
+}
+::-webkit-scrollbar-track-piece {
+background-color: #1d1d1d;
+}
+
+
+
+//footer
+
+.steam_footer{
+    width: 100%;
+    height: 290px;
+    background-color: #171a21;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+}
+
+.footer_border_top{
+    border-top: 1px solid #363c44;
+    margin: 10px auto;
+    width: 40%;
+    height: 8px;
+}
+
+.footer_box_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 40%;
+    margin: 0 auto;
+}
+.footer_box_1 span {
+    background-color:rgba(150, 158, 171, 0.3);
+    color: #969eab;
+    padding: 3px 15px;
+    margin: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.footer_box_2{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 40%;
+}
+.img_section_box {
+    display: flex;
+    justify-content: space-between;
+
+}
+.img_section_box img {
+    width: 88px;
+    height: 25px;
+}
+
+.text_section_box {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    color: #8F98A0;
+    font-size: 12px;
+}
+.text_section_box a{
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    margin: 0 5px;
+}
+
+
+.footer_box_3 {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.footer_box_3 a {
+    color: #ffffff;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 0 8px;
+    position: relative;
+
+}
+.border_at_right::after {
+    content: "";
+    border-left: 1px solid #8F98A0;
+    position: absolute;
+    height: 10px;
+    top: 5px;
+    margin-left: 6px;
+}
+
+
+.img_icon_positioning img{
+    vertical-align: bottom;
+    margin-right: 5px;
+}
+
+
+
+// footer drop down 
+
+.footer_box_1 span ul {
+    display: none;
+    position: absolute;
+    background: #417A9B;
+    box-shadow: 3px 3px 5px -3px #000;
+    margin-left: -15px;
+    margin-top: 3px;
+}
+.footer_box_1 span ul li {
+    display: block;
+    background: #417a9b;
+    padding: 5px 6px;
+}
+.footer_box_1 span ul li a {
+    text-decoration: none;
+    color: #d8d8d8;
+    text-transform: none;
+}
+.footer_box_1 span ul li a:hover {
+    color: white;
+}
+.footer_box_1 span:hover ul {
+    display: block;
+}
+
+// footer drop down  - end 
